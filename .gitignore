@@ -1,0 +1,33 @@
+# Swift and Xcode build products
+.build/
+build/
+DerivedData/
+*.app
+*.dSYM
+*.xcarchive
+
+# Per-user Xcode state
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+
+# Packaged releases and local backups
+Dist/
+
+# FlashNotes local content must never enter source control
+*.store
+*.store-shm
+*.store-wal
+Attachments/
+
+# Local credentials and environment overrides
+.env
+.env.*
+!.env.example
+*.p12
+*.mobileprovision
+*.key
+
+# macOS metadata
+.DS_Store
