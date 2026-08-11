@@ -15,7 +15,7 @@ FlashNotes is a local-only native macOS flashcard and Markdown notes app built w
 - Open the command palette with **Shift-Command-P**.
 - Navigate with the toolbar arrows or **Command-[** and **Command-]**. Breadcrumbs above the content show your current location.
 - Right-click folders to favorite them or choose a color and symbol. Right-click notes and decks to favorite or tag them.
-- To remove a favorite, right-click it anywhere in the sidebar—including the Favorites section—and choose **Remove from Favorites**.
+- To remove a favorite, right-click it anywhere in the sidebar and choose **Remove from Favorites**.
 - Each folder has its own sorting controls. The sidebar also provides Favorites, Recent, Expand All, Collapse All, and Trash.
 - Normal deletion moves content to Trash without a warning. Trash supports restoring content or permanently deleting it.
 
