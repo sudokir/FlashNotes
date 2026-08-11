@@ -1,6 +1,6 @@
 # FlashNotes
 
-FlashNotes is a local-only native macOS flashcard and Markdown notes app built with SwiftUI, SwiftData, TextKit, and AppKit. It targets macOS 14 or later and contains no network, account, analytics, cloud, or API integration.
+FlashNotes is a local-only native macOS student productivity app intended to combine basic features from popular flashcard and note-taking software (Anki, Obsidian, etc.) into one simple, lightweight program. It was built with SwiftUI, SwiftData, TextKit, and AppKit. Cloud syncing and further public release features are in development.
 
 ## Open and run
 
