@@ -23,4 +23,11 @@
 @media(max-width:760px){.app-shell{grid-template-columns:1fr}.sidebar{position:fixed;z-index:100;top:52px;bottom:0;width:230px}.window-title{display:none}.topbar{grid-template-columns:minmax(0,1fr) auto}.toolbar-actions{grid-column:2}.toolbar-button span{display:none}.folder-home{padding:18px}.formatbar{overflow-x:auto}.statusbar .tertiary{display:none}.deck-workspace{grid-template-columns:150px 1fr}}
 @media(prefers-color-scheme:dark){:root{--bg:#1e1e1e;--toolbar:#202020;--toolbar2:#252525;--sidebar:rgba(27,27,27,.96);--footer:#1c1c1c;--control:#303030;--hover:#3a3a3a;--text:#f1f1f1;--muted:#999;--tertiary:#777;--line:#393939;--select:#606060}.topbar{background:#202020;box-shadow:inset 0 1px #ffffff0b}.icon-button:hover,.toolbar-button:hover{background:var(--hover);border-color:var(--line)}.markdown-input{caret-color:#fff}}
 
+/* Keep the browser's font metrics from shifting the Mac-style navigation controls. */
+.sf-back:before,.sf-forward:before{content:"";width:7px;height:7px;border-top:2px solid currentColor;border-right:2px solid currentColor}
+.sf-back:before{transform:rotate(-135deg)}
+.sf-forward:before{transform:rotate(45deg)}
+.history-buttons .icon-button{width:30px;padding:0}
+.topbar button:disabled:hover{border-color:transparent;background:transparent}
+
 @media print{.topbar,.sidebar,.breadcrumb,.tab-strip,.note-title-row,.formatbar,.statusbar{display:none!important}.app-shell,.workspace{display:block;height:auto}.workspace-content,.editor,.markdown-editor{height:auto;overflow:visible}.markdown-preview{position:static;overflow:visible}.markdown-input{display:none}}
