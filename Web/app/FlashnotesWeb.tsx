@@ -163,10 +163,11 @@ export default function FlashnotesWeb({ displayName }: { displayName: string }) 
 
   return <main className={`app-shell ${sidebarVisible ? "" : "sidebar-hidden"}`} onClick={() => { setMenu(null); setNewMenu(false); setSortMenu(false); }}>
     <header className="topbar">
-      <div className="traffic-lights"><i /><i /><i /></div>
-      <button className="icon-button" onClick={event => { event.stopPropagation(); setSidebarVisible(value => !value); }} title="Show or Hide Sidebar"><Icon name="sidebar" /></button>
-      <div className="history-buttons"><button className="icon-button" disabled={historyIndex <= 0} onClick={() => backForward(-1)}><Icon name="back" /></button><button className="icon-button" disabled={historyIndex >= history.length - 1} onClick={() => backForward(1)}><Icon name="forward" /></button></div>
-      <button className="toolbar-button" onClick={() => selectedItem ? navigate(selectedFolderId, null) : navigate(selectedFolder?.parentId ?? selectedFolderId, null)} disabled={!selectedFolder}><Icon name="home" /><span>Home</span></button>
+      <div className="toolbar-navigation">
+        <button className="icon-button" onClick={event => { event.stopPropagation(); setSidebarVisible(value => !value); }} title="Show or Hide Sidebar"><Icon name="sidebar" /></button>
+        <div className="history-buttons"><button className="icon-button" disabled={historyIndex <= 0} onClick={() => backForward(-1)}><Icon name="back" /></button><button className="icon-button" disabled={historyIndex >= history.length - 1} onClick={() => backForward(1)}><Icon name="forward" /></button></div>
+        <button className="toolbar-button" onClick={() => selectedItem ? navigate(selectedFolderId, null) : navigate(selectedFolder?.parentId ?? selectedFolderId, null)} disabled={!selectedFolder}><Icon name="home" /><span>Home</span></button>
+      </div>
       <div className="window-title">FlashNotes</div>
       <div className="toolbar-actions"><button className="sync-state" data-state={saving} title={`Cloud revision ${revision}`}><Icon name={saving === "saved" ? "cloud-ok" : saving === "saving" ? "sync" : "cloud-off"} /></button><button className="icon-button" onClick={() => setSearchOpen(true)} title="Search Library"><Icon name="search" /></button><div className="menu-anchor"><button className="toolbar-button" onClick={event => { event.stopPropagation(); setNewMenu(value => !value); }}><Icon name="plus" /><span>New</span></button>{newMenu && <PopupMenu actions={[{ label: "Top-Level Folder", run: () => createFolder() }, { label: "Subfolder", disabled: !selectedFolder, run: () => selectedFolder && createFolder(selectedFolder.id) }, { label: "", separator: true, run: () => {} }, { label: "Flashcard Deck", disabled: !selectedFolder, run: () => createItem("deck") }, { label: "Note", disabled: !selectedFolder, run: () => createItem("note") }]} />}</div><button className="icon-button" onClick={() => setDevicesOpen(true)} title="Web Sync"><Icon name="settings" /></button></div>
     </header>
